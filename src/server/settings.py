@@ -85,10 +85,23 @@ WSGI_APPLICATION = 'server.wsgi.application'
 # }
 
 
-import dj_database_url
+# import dj_database_url
+# DATABASES = {
+#     'default': dj_database_url.config()
+# }
+
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'fe-criptomoeda',
+        'USER': 'root',
+        'PASSWORD': 'password',
+        'HOST': 'mysql',
+        'PORT': 3306
+    }
 }
+
+# mysql://root:password@mysql:3306/
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -130,12 +143,12 @@ STATIC_URL = '/static/'
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
+        # 'rest_framework.permissions.IsAuthenticated',
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'services.backends.MyBackend',
         # 'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.BasicAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication',
+        # 'rest_framework.authentication.BasicAuthentication',
     ),
 }

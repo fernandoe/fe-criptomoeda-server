@@ -1,5 +1,7 @@
 from rest_framework import viewsets
+from rest_framework.permissions import IsAuthenticated
 
+from .models import Moeda
 from .serializers import MoedaModelSerializer
 
 
@@ -12,7 +14,8 @@ from .serializers import MoedaModelSerializer
 
 class MoedaModelViewSet(viewsets.ModelViewSet):
     serializer_class = MoedaModelSerializer
-    # permission_classes = (IsAuthenticated,)
+    queryset = Moeda.objects.all()
+    permission_classes = (IsAuthenticated,)
 
     # def get_queryset(self):
     #     if self.request.user.entity is None:
