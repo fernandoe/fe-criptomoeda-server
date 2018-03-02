@@ -14,3 +14,6 @@ compose-migrate:
 
 compose-createsuperuser:
 	docker-compose run criptomoeda python manage.py createsuperuser
+
+django-dumpdata:
+	cd src; python manage.py dumpdata --indent 4 criptomoedas.Moeda > ./criptomoedas/fixtures/criptomoedas.Moeda.json

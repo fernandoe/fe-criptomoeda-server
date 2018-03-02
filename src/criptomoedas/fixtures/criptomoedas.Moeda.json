@@ -1,0 +1,32 @@
+[
+{
+    "model": "criptomoedas.moeda",
+    "pk": "089058f6-8106-4520-b4e7-61e409c8b4ae",
+    "fields": {
+        "created_at": "2018-03-02T05:31:49.180Z",
+        "updated_at": "2018-03-02T05:31:49.180Z",
+        "nome": "Ethereum",
+        "codigo": "ETH"
+    }
+},
+{
+    "model": "criptomoedas.moeda",
+    "pk": "74b76319-14c4-4fbe-829a-1075b0bf5ae4",
+    "fields": {
+        "created_at": "2018-03-02T05:32:35.645Z",
+        "updated_at": "2018-03-02T05:32:35.645Z",
+        "nome": "Bitcoin",
+        "codigo": "BTC"
+    }
+},
+{
+    "model": "criptomoedas.moeda",
+    "pk": "df5e14c3-fd6c-4994-a4ca-a5499833a46e",
+    "fields": {
+        "created_at": "2018-03-02T05:32:21.593Z",
+        "updated_at": "2018-03-02T05:32:21.593Z",
+        "nome": "Zclassic",
+        "codigo": "ZCL"
+    }
+}
+]
