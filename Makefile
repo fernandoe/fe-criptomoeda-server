@@ -12,6 +12,9 @@ compose-up:
 compose-migrate:
 	docker-compose run criptomoeda python manage.py migrate
 
+compose-makemigrations:
+	docker-compose run criptomoeda python manage.py makemigrations
+
 compose-createsuperuser:
 	docker-compose run criptomoeda python manage.py createsuperuser
 
